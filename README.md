@@ -8,19 +8,27 @@ Quick examples to hit the road:
 
 ### Instantiate your cypher
 
+```ruby
 cypher = Alnum::Cypher.new
+```
 
 ### Get your alphanumeric code
 
+```ruby
 cypher.write(32456) => "8ru"
+```
 
 ### Instantiate your decipher
 
+```ruby
 decipher = Alnum::Decipher.new
+```
 
 ### Get your integer back
 
+```ruby
  decipher.read("8ru") => 32456
+```
 
 ## Purpose
 
