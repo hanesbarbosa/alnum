@@ -2,6 +2,26 @@
 
 Alnum is a generator of alphanumeric code from integers and vice-versa.
 
+## The Long Story Short
+
+Quick examples to hit the road:
+
+### Instantiate your cypher
+
+cypher = Alnum::Cypher.new
+
+### Get your alphanumeric code
+
+cypher.write(32456) => "8ru"
+
+### Instantiate your decipher
+
+decipher = Alnum::Decipher.new
+
+### Get your integer back
+
+ decipher.read("8ru") => 32456
+
 ## Purpose
 
 This gem was created to serve as a parser that can generates alphanumeric tokens as a resultant conversion of integer numbers. It can work backwards too, converting alphanumeric codes back to the previous integer representation. You can only decipher a code that was created by this same module.
@@ -12,7 +32,7 @@ This can be used for any kind of tokens, but mainly for shortening URIs or URLs.
 
 When you're using URL shorteners, you are switching your link by an alphanumeric token. The short or tiny URLs are abstrations of the real ones. The original link is stored in some database and you can use the tiny generated code to share among all those social media out there.
 
-The long story short, systems can store large URLs in databases and using the ID key generated (integer) can create a short URL. So you can append this little part to your domain like this:
+Systems can store large URLs in databases and using the ID key generated (integer) can create a short URL. So you can append this little part to your domain like this:
 
 http://www.yourdomain.com/token
 
