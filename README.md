@@ -22,7 +22,7 @@ The module here doesn’t create the hole functionality, just give you methods f
 
 According to the HTTP protocol, an URI can be depicted as follows:
 
-<scheme>://<authority>/<path>?<query>#<fragment>
+scheme://authority/path?query#fragment
 
 As an example we can figure out how it appears in the real world:
 
@@ -43,4 +43,4 @@ Path segments like “.” and “..” and so forth, has special meanings, so y
 
 ## Conclusion
 
-The code here just give you symbols from the alphabet and digits. You can expand the classes in differents flavor as you wish.
+The code here just give you symbols from the alphabet and digits. You can expand the classes in differents flavors as you wish.
