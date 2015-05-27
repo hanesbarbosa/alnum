@@ -2,25 +2,25 @@ require_relative '../alnum'
 
 module Alnum
 
-	class Cypher
+  class Cypher
 
-		def write(number)
-			raise TypeError, "Only integers allowed" unless number.is_a? Integer   
+    def write(number)
+      raise TypeError, "Only integers allowed" unless number.is_a? Integer   
 
-			numbers = []
-			quotient = 0
+      numbers = []
+      quotient = 0
 
-			until number < BASE do
-				rest = number % BASE
-				quotient = (number - rest) / BASE
-				numbers << SYMBOLS[rest]
-				number = quotient
-			end
+      until number < BASE do
+        rest = number % BASE
+        quotient = (number - rest) / BASE
+        numbers << SYMBOLS[rest]
+        number = quotient
+      end
 
-			numbers << SYMBOLS[number]
-			numbers.reverse.join
-		end
+      numbers << SYMBOLS[number]
+      numbers.reverse.join
+    end
 
-	end
+  end
 
 end
