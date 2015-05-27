@@ -1,6 +1,8 @@
+require_relative 'lib/alnum/version'
+
 Gem::Specification.new do |s|
   s.name        = 'alnum'
-  s.version     = '1.0.0'
+  s.version     = Alnum::VERSION
   s.date        = '2015-05-26'
   s.summary     = "Alphanumeric code generator."
   s.description = "Alnum is a generator of alphanumeric code from integers and vice-versa. Can be useful shortening ID numbers in order to create tiny or short URLs."
