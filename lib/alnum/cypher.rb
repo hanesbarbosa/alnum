@@ -5,7 +5,6 @@ module Alnum
 	class Cypher
 
 		def write(number)
-			
 			raise TypeError, "Only integers allowed" unless number.is_a? Integer   
 
 			numbers = []
