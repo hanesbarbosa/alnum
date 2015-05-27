@@ -2,6 +2,12 @@
 
 Alnum is a generator of alphanumeric code from integers and vice-versa.
 
+## Installation
+
+```ruby
+[sudo] gem install alnum
+```
+
 ## The Long Story Short
 
 Quick examples to hit the road:
