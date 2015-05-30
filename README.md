@@ -1,6 +1,6 @@
 # alnum
 
-Alnum is a generator of alphanumeric code from integers and vice-versa.
+Alnum is a generator of alphanumeric code from integers and vice-versa. Inspired in the POSIX character class [:alnum:] it uses just alphanumeric characters accordingly to the pattern [a-zA-Z0-9].
 
 ## Installation
 
