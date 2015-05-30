@@ -1,14 +1,34 @@
-require_relative 'alnum/cypher'
-require_relative 'alnum/decipher'
+require_relative 'alnum/symbols'
 
 module Alnum
 
-  SYMBOLS = %w{
-    0 1 2 3 4 5 6 7 8 9
-    a b c d e f g h i j k l m n o p q r s t u v w x y z
-    A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
-  }
-
   BASE = SYMBOLS.length
+
+  def self.cypher(number)
+    raise TypeError, "Only integers allowed" unless number.is_a? Integer   
+
+    numbers = []
+
+    until number < BASE do
+      remainder = number % BASE
+      numbers << SYMBOLS[remainder]
+      number = (number - remainder) / BASE
+    end
+
+    numbers << SYMBOLS[number]
+    numbers.reverse.join
+  end
+
+  def self.decipher(alphanumeric)
+    number, count = 0, 0
+
+    alphanumeric.to_s.reverse.each_char() do |c|
+      raise RangeError, "Code contains characters out of range: '#{c}'" if SYMBOLS.index(c).nil?
+      number += SYMBOLS.index(c) * BASE**count
+      count += 1
+    end
+
+    number    
+  end
 
 end
