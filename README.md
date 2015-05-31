@@ -15,13 +15,13 @@ Quick examples to hit the road:
 ### Get your alphanumeric code
 
 ```ruby
-Alnum::cypher(32456) => "8ru"
+Alnum.cypher(32456) => "8ru"
 ```
 
 ### Get your integer back
 
 ```ruby
-Alnum::decipher("8ru") => 32456
+Alnum.decipher("8ru") => 32456
 ```
 
 ## Purpose
